@@ -1,6 +1,5 @@
 from flask import Flask, jsonify
-import os
-import socket
+import os, socket
 import redis
 app = Flask(__name__)
 cache = redis.Redis(host=os.environ.get("REDIS_HOST", "redis"), port=6379)
